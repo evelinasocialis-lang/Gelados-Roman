@@ -1,0 +1,80 @@
+/* ==========================================
+1. DEFINIÇÕES GLOBAIS (Cores Soft / Pastel)
+========================================== */
+:root {
+--fundo-creme: #fbf7f4; /* Fundo geral suave */
+--rosa-soft: #fad2e1; /* Destaque principal */
+--menta-soft: #e2ece9; /* Detalhes e caixas */
+--texto-suave: #4a4a4a; /* Cinzento escuro confortável */
+}
+
+body {
+background-color: var(--fundo-creme);
+color: var(--texto-suave);
+font-family: 'Poppins', sans-serif;
+position: relative;
+min-height: 100vh;
+}
+
+/* ==========================================
+2. MENU / NAVBAR (Comum a todas as páginas)
+========================================== */
+.navbar {
+background-color: rgba(255, 255, 255, 0.85) !important;
+backdrop-filter: blur(8px);
+border-bottom: 1px solid var(--rosa-soft);
+z-index: 10;
+}
+
+.navbar-brand { font-weight: 700; color: var(--texto-suave) !important; }
+.nav-link { color: var(--texto-suave) !important; font-weight: 500; transition: color 0.3s ease; }
+.nav-link:hover, .nav-link.active { color: #e56b6f !important; }
+
+/* ==========================================
+3. DECORAÇÃO DA PÁGINA DE SABORES
+========================================== */
+.card-sabor {
+background-color: #ffffff;
+border: none;
+border-radius: 20px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+transition: transform 0.3s ease;
+overflow: hidden;
+position: relative;
+z-index: 2;
+}
+.card-sabor:hover { transform: translateY(-5px); }
+.card-sabor img { height: 220px; object-fit: cover; }
+.titulo-sabor { font-weight: 600; color: var(--texto-suave); }
+
+/* ==========================================
+4. DECORAÇÃO DA PÁGINA DE CONTACTOS
+========================================== */
+.container-contacto {
+background-color: #ffffff;
+border-radius: 24px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+padding: 40px;
+border: 1px solid rgba(250, 210, 225, 0.4);
+position: relative;
+z-index: 2;
+}
+.form-label { font-weight: 600; }
+.form-control { border: 2px solid var(--menta-soft); border-radius: 14px; padding: 12px; }
+.form-control:focus { border-color: var(--rosa-soft); box-shadow: 0 0 0 4px rgba(250, 210, 225, 0.3); }
+.btn-soft { background-color: var(--rosa-soft); color: var(--texto-suave); font-weight: 600; border: none; border-radius: 30px; padding: 12px 30px; transition: background-color 0.3s ease; }
+.btn-soft:hover { background-color: #f7b2bd; }
+.info-box { background-color: var(--menta-soft); border-radius: 16px; padding: 20px; }
+
+/* ==========================================
+5. RODAPÉ (Comum a todas as páginas)
+========================================== */
+footer { background-color: #ffffff; border-top: 1px solid var(--menta-soft); position: relative; z-index: 2; }
+
+/* ==========================================
+6. DETALHES FOFOS DE FUNDO (Margens e Gelados)
+========================================== */
+html { border: 12px solid var(--rosa-soft); min-height: 100vh; box-sizing: border-box; }
+.gelado-fundo { position: fixed; font-size: 8rem; opacity: 0.05; pointer-events: none; z-index: 1; user-select: none; }
+.gelado-esquerdo { bottom: 40px; left: 40px; transform: rotate(-15deg); }
+.gelado-direito { top: 120px; right: 40px; transform: rotate(15deg); }
